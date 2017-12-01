@@ -27,3 +27,28 @@ Nestjs的官網建議使用TypeScript，後續的示範都會以TypeScript去撰
 * 資料庫操作篇(3天):介紹如何透過Nestjs的API去串接操作資料庫。
 * 串接第三方API運用篇(3天):介紹如何在Nestjs使用Passport模組、串接Swagger服務等。
 * 會員聊天室實作篇(9天):採Restful API風格，撰寫具備CRUD功能且能即時聊天的小專案。
+
+## 準備環境(筆者環境)
+* NodeJS version:8.9.1
+* npm version:5.5.1
+
+## Nestjs專案準備步驟
+1. 安裝Nestjs CLI工具
+```
+npm install -g @nestjs/cli
+```
+2. 透過Nestjs CLI工具起一個Nestjs專案
+```
+nest new NestStarter
+```
+3. 切換到安裝資料夾，並安裝相關模組
+```
+cd NestStarter & npm install
+```
+4. 修改index.js
+```
+require('ts-node/register');
+require('./src/server');
+```
+5. 大功告成
+![Alt text](../ScreenShot "查看http://localhost:3000/")
