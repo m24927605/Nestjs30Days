@@ -34,21 +34,21 @@ Nestjs的官網建議使用TypeScript，後續的示範都會以TypeScript去撰
 
 ## Nestjs專案準備步驟
 1. 安裝Nestjs CLI工具
-```
-npm install -g @nestjs/cli
-```
+
+    npm install -g @nestjs/cli
+
 2. 透過Nestjs CLI工具起一個Nestjs專案
-```
-nest new NestStarter
-```
+
+    nest new NestStarter
+
 3. 切換到安裝資料夾，並安裝相關模組
-```
-cd NestStarter & npm install
-```
+
+    cd NestStarter & npm install
+
 4. 修改index.js
-```
-require('ts-node/register');
-require('./src/server');
-```
+
+    require('ts-node/register');
+    require('./src/server');
+
 5. 大功告成
-![Alt text](../ScreenShot "查看http://localhost:3000/")
+![查看http://localhost:3000/](./ScreenShot/Server-Start.png)
