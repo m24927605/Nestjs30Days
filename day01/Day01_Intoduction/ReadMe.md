@@ -46,7 +46,7 @@ nest new NestStarter
 cd NestStarter & npm install
 ```
 4. 修改index.js
-```
+```typescript
 require('ts-node/register');
 require('./src/server');
 ```
