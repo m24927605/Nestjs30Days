@@ -33,15 +33,15 @@ JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 * npm version:5.5.1
 
 ## Nestjs專案準備步驟
-1. 安裝[Nestjs CLI工具](https://github.com/nestjs/nest-cli)
+1. cmd下指令,安裝[Nestjs CLI工具](https://github.com/nestjs/nest-cli)
 ```
 npm install -g @nestjs/cli
 ```
-2. 透過[Nestjs CLI工具](https://github.com/nestjs/nest-cli)工具建立一個Nestjs專案
+2. ，cmd下指令，透過[Nestjs CLI工具](https://github.com/nestjs/nest-cli)工具建立一個Nestjs專案
 ```
 nest new NestStarter
 ```
-3. 切換到安裝資料夾，並安裝相關模組
+3. cmd下指令，切換到安裝資料夾，並安裝相關模組
 ```
 cd NestStarter & npm install
 ```
@@ -50,5 +50,8 @@ cd NestStarter & npm install
 require('ts-node/register');
 require('./src/server');
 ```
-5. 大功告成，server已經啟動，預設listen 3000 port。
+5. cmd下指令，啟動Server，如有看到下圖即大功告成，預設listen 3000 port。
+```
+npm start
+```
 ![查看http://localhost:3000/](./ScreenShot/Server-Start.png)
