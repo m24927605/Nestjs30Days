@@ -12,7 +12,7 @@ JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 ## Nestjs Framework幾個特點:
 1. Base On [Express](http://expressjs.com/) 框架和[socket.io](https://socket.io/)套件。
 2. 語法風格類似[Angular](https://angular.io/)，也有人覺得類似[Java Spring](https://spring.io/)，使用了許多裝飾器語法。
-3. [依賴注入(Dependency Injection)](https://docs.nestjs.com/fundamentals/dependency-injection)，[Nestjs](https://nestjs.com/)大量使用[依賴注入](https://docs.nestjs.com/fundamentals/dependency-injection)，建議使用此作法。
+3. [依賴注入(Dependency Injection)](https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5)，[Nestjs](https://nestjs.com/)大量使用[依賴注入](https://docs.nestjs.com/fundamentals/dependency-injection)，建議使用此作法。
 4. [Exception layer](https://docs.nestjs.com/exception-filters)，可以做更多的exception處理。
 5. [Guards](https://docs.nestjs.com/guards)作為路由警衛，處理訪問權限。
 6. [Interceptors](https://docs.nestjs.com/interceptors)攔截器機制。
