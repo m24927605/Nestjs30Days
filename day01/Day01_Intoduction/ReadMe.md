@@ -21,7 +21,7 @@ JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 基於上述幾個特點，[Nestjs](https://nestjs.com/)做了很多抽象層，程式如果是用[Nestjs](https://nestjs.com/)開發，會較接近低藕合架構，甚至開發速度也會有大幅提升;另一方面，[Nestjs](https://nestjs.com/)的底層是Express框架，在使用[Nestjs](https://nestjs.com/)開發時，也可以呼叫[Express的API](https://docs.nestjs.com/controllers)，而且[Express](http://expressjs.com/)作為最多人使用的NodeJS後端框架，是有潛力吸收廣大使用[Express](http://expressjs.com/)開發的工程師，建立龐大活躍的社群。
 
 ## 筆者30天規劃
-* 基礎介紹篇(10天):了解[Modules](https://docs.nestjs.com/modules)、[Controller](https://docs.nestjs.com/controllers)、[Component](https://docs.nestjs.com/components)、等框架的核心API。
+* 基礎介紹篇(10天):了解[Modules](https://docs.nestjs.com/modules)、[Controllers](https://docs.nestjs.com/controllers)、[Components](https://docs.nestjs.com/components)、等框架的核心API。
 * [Webscoket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)運用篇(3天):[Nestjs](https://nestjs.com/)對於[Websocket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)有一些處理[更細緻的API](https://docs.nestjs.com/websockets/gateways)可以使用。
 * [MicroServices](https://zh.wikipedia.org/zh-tw/%E5%BE%AE%E6%9C%8D%E5%8B%99)運用篇(2天):了解[Nestjs](https://nestjs.com/)如何建立[MicroServices](https://docs.nestjs.com/microservices/basics)。
 * 資料庫操作篇(3天):介紹如何透過[Nestjs](https://nestjs.com/)的API去[串接操作資料庫](https://docs.nestjs.com/recipes/sql-typeorm)。
