@@ -1,7 +1,7 @@
 # Nest.js framework 30天初探:Day01 攻略行前說明
 
 <blockquote>
-    [NodeJS](https://nodejs.org/en/)後端框架眾多，唯獨[Nestjs](https://nestjs.com/)這框架最吸引我，雖然今年三月底出爐，還算蠻新的框架，網路上資源不多，但我相信日後它會有一席之地，因為我在努力推廣XDDDD，阿不是，是因為它架構嚴謹，能寫出高品質的程式。
+    [NodeJS](https://nodejs.org/en/) 後端框架眾多，唯獨[Nestjs](https://nestjs.com/) 這框架最吸引我，雖然今年三月底出爐，還算蠻新的框架，網路上資源不多，但我相信日後它會有一席之地，因為我在努力推廣XDDDD，阿不是，是因為它架構嚴謹，能寫出高品質的程式。
 </blockquote>
 
 ## 前言
@@ -22,11 +22,11 @@ JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 
 ## 筆者30天規劃
 * 基礎介紹篇(10天):了解[Modules](https://docs.nestjs.com/modules)、[Controller](https://docs.nestjs.com/controllers)、[Component](https://docs.nestjs.com/components)、等框架的核心API。
-* [Webscoket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)運用篇(3天):Nestjs對於[Websocket](https://docs.nestjs.com/websockets/gateways)有一些處理更細緻的API可以使用。
+* [Webscoket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)運用篇(3天):[Nestjs](https://nestjs.com/)對於[Websocket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)有一些處理[更細緻的API](https://docs.nestjs.com/websockets/gateways)可以使用。
 * [MicroServices](https://zh.wikipedia.org/zh-tw/%E5%BE%AE%E6%9C%8D%E5%8B%99)運用篇(2天):了解[Nestjs](https://nestjs.com/)如何建立[McroServices](https://docs.nestjs.com/microservices/basics)。
-* 資料庫操作篇(3天):介紹如何透過[Nestjs](https://nestjs.com/)的API去串接操作資料庫。
+* 資料庫操作篇(3天):介紹如何透過[Nestjs](https://nestjs.com/)的API去[串接操作資料庫](https://docs.nestjs.com/recipes/sql-typeorm)。
 * 串接第三方API運用篇(3天):介紹如何在[Nestjs](https://nestjs.com/)使用[Passport模組](https://docs.nestjs.com/recipes/passport)、串接[Swagger](https://docs.nestjs.com/recipes/swagger)服務等。
-* 會員聊天室實作篇(9天):採Restful API風格，撰寫具備CRUD功能且能即時聊天的小專案。
+* 會員聊天室實作篇(9天):採[Restful API](https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming)風格，撰寫具備CRUD功能且能即時聊天的小專案。
 
 ## 準備環境(筆者環境)
 * NodeJS version:8.9.1
