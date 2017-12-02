@@ -1,7 +1,7 @@
 # Nest.js framework 30天初探:Day01 攻略行前說明
 
 ## 筆者廢話時間
-    [NodeJS](https://nodejs.org/en/) 後端框架眾多，唯獨[Nestjs](https://nestjs.com/) 這框架最吸引我，雖然今年三月底出爐，還算蠻新的框架，網路上資源不多，但我相信日後它會有一席之地，因為我在努力推廣XDDDD，阿不是，是因為它架構嚴謹，能寫出高品質的程式。
+[NodeJS](https://nodejs.org/en/) 後端框架眾多，唯獨[Nestjs](https://nestjs.com/) 這框架最吸引我，雖然今年三月底出爐，還算蠻新的框架，網路上資源不多，但我相信日後它會有一席之地，因為我在努力推廣XDDDD，阿不是，是因為它架構嚴謹，能寫出高品質的程式。
 
 
 ## 前言
@@ -50,5 +50,5 @@ cd NestStarter & npm install
 require('ts-node/register');
 require('./src/server');
 ```
-5. 大功告成
+5. 大功告成，server已經啟動，預設run在 3000 port。
 ![查看http://localhost:3000/](./ScreenShot/Server-Start.png)
