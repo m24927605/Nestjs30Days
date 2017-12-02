@@ -1,8 +1,8 @@
 # Nest.js framework 30天初探:Day01 攻略行前說明
 
-<blockquote>
+## 筆者廢話時間
     [NodeJS](https://nodejs.org/en/) 後端框架眾多，唯獨[Nestjs](https://nestjs.com/) 這框架最吸引我，雖然今年三月底出爐，還算蠻新的框架，網路上資源不多，但我相信日後它會有一席之地，因為我在努力推廣XDDDD，阿不是，是因為它架構嚴謹，能寫出高品質的程式。
-</blockquote>
+
 
 ## 前言
 JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼嚴謹，這可搞死很多工程師，近幾年雖然有ES6、ES7、ES8的出現(ES9正在擬稿)，可以幫助工程師提高程式品質，但跟強型別語言還是有些差距，於是出現了[TypeScript](https://www.typescriptlang.org/)，可以用[TypeScript](https://www.typescriptlang.org/)寫出強型別風格的程式碼，再透過[Babel](https://babeljs.io/)轉換成指定版本的JavaScript([ECMAScript版本](https://en.wikipedia.org/wiki/ECMAScript))。
@@ -37,7 +37,7 @@ JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 ```
 npm install -g @nestjs/cli
 ```
-2. 透過Nestjs CLI工具起一個Nestjs專案
+2. 透過[Nestjs CLI工具](https://github.com/nestjs/nest-cli)工具建立一個Nestjs專案
 ```
 nest new NestStarter
 ```
@@ -45,7 +45,7 @@ nest new NestStarter
 ```
 cd NestStarter & npm install
 ```
-4. 修改index.js
+4. 修改index.js，新增引用ts-node/register模組並修改server模組引用的路徑。
 ```typescript
 require('ts-node/register');
 require('./src/server');
