@@ -45,7 +45,7 @@ nest new NestStarter
 ```
 cd NestStarter & npm install
 ```
-4. 修改index.js，新增引用ts-node/register模組並修改server模組引用的路徑。
+4. 修改index.js，新增引用ts-node/register模組並修改server.js引用的路徑。
 ```typescript
 require('ts-node/register');
 require('./src/server');
