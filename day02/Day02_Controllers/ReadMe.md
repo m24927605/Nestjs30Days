@@ -10,7 +10,7 @@ cd src/app & mkdir Users
 2. 在src/app/Users，新增users.controller.ts，其程式碼如下:
 ![Controllers_Code01](./ScreenShot/Controllers_2.png)
 
-說明: UsersController是一個帶有裝飾器(Decorator)的類，我們定義好了上述/users、/users/:id，但ApplicationModule(根模組)，尚未引用UsersController，程式會完全沒變化，所以要去src/app/app.module.ts改寫程式碼。
+說明: UsersController是一個帶有裝飾器(Decorator)的類，裝飾器(Decorator)會把metadata連接到controller上，我們定義好了上述/users、/users/:id，但ApplicationModule(根模組)，尚未引用UsersController，程式會完全沒變化，所以要去src/app/app.module.ts改寫程式碼。
 
 3. 在src/app/app.module.ts，改寫成下圖所示。
 ![根模組引用controllers](./ScreenShot/Controllers_3.png)
