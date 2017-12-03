@@ -28,7 +28,7 @@ JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 * 串接第三方API運用篇(3天):介紹如何在[Nestjs](https://nestjs.com/)使用[Passport模組](https://docs.nestjs.com/recipes/passport)、串接[Swagger](https://docs.nestjs.com/recipes/swagger)服務等。
 * 會員聊天室實作篇(9天):採[Restful API](https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming)風格，撰寫具備CRUD功能且能即時聊天的小專案。
 
-##歡迎大家討論指教
+## 歡迎大家討論指教
 筆者文筆拙劣，程式功力薄弱，說明解釋不佳或程式有問題之地方，請不吝指教。
 
 ## 準備環境(筆者環境)
