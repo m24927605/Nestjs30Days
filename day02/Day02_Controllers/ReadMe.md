@@ -43,30 +43,30 @@ npm start
 說明: 程式碼精簡許多，適合寫Restful API。
 
 8. Nestjs有對比Express自定義參數，下圖為對照表。
-![NestjsExpress對照](./ScreenShot/Controller_8.png)
+![NestjsExpress對照](./ScreenShot/Controllers_8.png)
 
 9. 使用Nestjs自定義的Express參數，修改程式碼如下圖。
-![Controllers_Code04](./ScreenShot/Controller_9.png)
+![Controllers_Code04](./ScreenShot/Controllers_9.png)
 
 10. POST 部分，我們建立一個檔名為create-users.dto的DTO類別(Data Transfer Object)，並定義好schema，如下圖所示。
 ```
 cd src/app/Users & mkdir DTO
 cd DTO
 ```
-![Controllers_Code05](./ScreenShot/Controller_10.png)
+![Controllers_Code05](./ScreenShot/Controllers_10.png)
 
 11. 修改UsersController程式碼如下圖。
-![Controllers_Code06](./ScreenShot/Controller_11.png)
+![Controllers_Code06](./ScreenShot/Controllers_11.png)
 
 12. 尚須引用bodyParser模組，故在程式根目錄下cmd指令。
 ```
 npm install body-parser @types/body-parser --save
 ``` 
 13. 安裝成功後，修改server.ts，引用bodyParser模組並且作為middleware使用，如下圖所示。
-![Controllers_Code07](./ScreenShot/Controller_12.png)
+![Controllers_Code07](./ScreenShot/Controllers_12.png)
 
 14. 如此就能接收到Client POST 過來的Body，[Postman](https://www.getpostman.com/apps)操作，如下圖所示。
-![Controllers_Code08](./ScreenShot/Controller_13.png)
+![Controllers_Code08](./ScreenShot/Controllers_13.png)
 
 15. POST 部分大功告成，可以收到Client POST的 Body，如下圖所示。
-![Controllers_Code08](./ScreenShot/Controller_14.png)
+![Controllers_Code08](./ScreenShot/Controllers_14.png)
