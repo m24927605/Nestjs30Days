@@ -2,9 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import { ApplicationModule } from './app/app.module';
 import { INestApplication } from '@nestjs/common/interfaces/nest-application.interface';
 import * as express from 'express';//使用express模組
+import * as bodyParser from 'body-parser';
 
 //創建express 實例
 const instance = express();
+//使用bodyParser模組，body轉json
+instance.use(bodyParser.json());
 //NestFactory.create()接受一個模組參數，和一個可選的express實例參數，並返回Promise。
 const app: Promise<INestApplication> = NestFactory.create(ApplicationModule, instance);
 

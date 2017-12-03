@@ -16,6 +16,8 @@
     "@nestjs/microservices": "^4.0.2",
     "@nestjs/testing": "^4.0.2",
     "@nestjs/websockets": "^4.0.2",
+    "@types/body-parser": "^1.16.8",
+    "body-parser": "^1.18.2",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.3"
   },
