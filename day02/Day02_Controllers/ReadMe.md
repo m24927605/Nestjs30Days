@@ -66,8 +66,8 @@ npm install body-parser @types/body-parser --save
 13. 安裝成功後，修改server.ts，引用bodyParser模組並且作為middleware使用，如下圖所示。
 ![Controllers_Code07](./ScreenShot/Controllers_12.png)
 
-14. 如此就能接收到Client POST 過來的Body，[Postman](https://www.getpostman.com/apps)操作，如下圖所示。
+14. 接著，透過[Postman](https://www.getpostman.com/apps) 往/users POST 一組JSON物件，如下圖所示。
 ![Controllers_Code08](./ScreenShot/Controllers_13.png)
 
-15. POST 部分大功告成，可以收到Client POST的 Body，如下圖所示。
+15. POST 部分大功告成，可以收到Client POST過來的 Body，如下圖所示。
 ![Controllers_Code08](./ScreenShot/Controllers_14.png)
