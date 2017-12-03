@@ -17,7 +17,7 @@ cd src/app & mkdir Users
 
 說明: 如此ApplicationModule就知道有UsersController的存在，程式也會去執行它。
 
-4. 下cmd指令，重啟server，並使用postman觀察http://localhost:3000/users
+4. 下cmd指令，重啟server，並使用[Postman](https://www.getpostman.com/apps)觀察http://localhost:3000/users
 ```
 ctrl+C
 npm start
@@ -49,7 +49,7 @@ npm start
 9. 使用Nestjs自定義的Express參數，修改程式碼如下圖。
 ![Controllers_Code04](./ScreenShot/Controllers_9.png)
 
-10. POST 部分，我們建立一個檔名為create-users.dto的DTO類別(Data Transfer Object)，並定義好schema，如下圖所示。
+10. POST 部分，我們建立一個檔名為create-users.dto.ts的DTO類別(Data Transfer Object)，並定義好schema，如下圖所示。
 ```
 cd src/app/Users & mkdir DTO
 cd DTO
