@@ -17,5 +17,5 @@ app
     })
   )
   .catch((err) => {
-    console.error('Application to listen on 3000 port failed to start', err);
+    console.error('Application configured to listen on port 3000 failed to start', err);
   });
