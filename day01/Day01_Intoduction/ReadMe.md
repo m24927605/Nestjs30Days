@@ -5,7 +5,7 @@
 
 
 ## 前言
-JavaScript係弱型別語言，型態轉換很自由，型態檢查也沒那麼嚴謹，這可搞死很多工程師，近幾年雖然有ES6、ES7、ES8的出現(ES9正在擬稿)，可以幫助工程師提高程式品質，但跟強型別語言還是有些差距，於是出現了[TypeScript](https://www.typescriptlang.org/)，可以用[TypeScript](https://www.typescriptlang.org/)寫出強型別風格的程式碼，再透過[Babel](https://babeljs.io/)轉換成指定版本的JavaScript([ECMAScript版本](https://en.wikipedia.org/wiki/ECMAScript))。
+JavaScript是弱型別語言，型態轉換很自由，型態檢查也沒那麼嚴謹，這可搞死很多工程師，近幾年雖然有ES6、ES7、ES8的出現(ES9正在擬稿)，可以幫助工程師提高程式品質，但跟強型別語言還是有些差距，於是出現了[TypeScript](https://www.typescriptlang.org/)，可以用[TypeScript](https://www.typescriptlang.org/)寫出強型別風格的程式碼，再透過[Babel](https://babeljs.io/)轉換成指定版本的JavaScript([ECMAScript版本](https://en.wikipedia.org/wiki/ECMAScript))。
 
 [Nestjs](https://nestjs.com/)的官網建議使用[TypeScript](https://www.typescriptlang.org/)，後續的示範都會以[TypeScript](https://www.typescriptlang.org/)去撰寫，如果要寫一般JavaScript也是可行的，不過官網有提到，有些[Nestjs](https://nestjs.com/)的API無法用JavaScript去呼叫使用，所以使用[TypeScript](https://www.typescriptlang.org/)作為開發語言會比較好。
 
