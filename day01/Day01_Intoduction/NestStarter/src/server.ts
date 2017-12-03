@@ -13,7 +13,7 @@ app
   .then(nestInstance =>
     //nest實例具有listen方法，傳入port參數，和一個可選的callback function。
     nestInstance.listen(3000, () => {
-      console.log('Application is listening on port 3000');
+      console.log('Application based on Express is listening on port 3000');
     })
   )
   .catch((err) => {

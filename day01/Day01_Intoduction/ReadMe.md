@@ -57,3 +57,5 @@ npm start
 ![查看http://localhost:3000/](./ScreenShot/Server-Start.png)
 6. 將server.ts的程式碼稍作變化，程式碼及說明如下圖:
 ![server.ts](./ScreenShot/Server-Start2.png)
+7. cmd下指令，如看到下圖，代表我們已經成功啟動一個base on Express的nest 程式。
+![查看http://localhost:3000/](./ScreenShot/Server-Start3.png)
