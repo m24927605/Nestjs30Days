@@ -22,7 +22,7 @@ JavaScript是弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 
 ## 筆者30天規劃
 * 基礎介紹篇(10天):了解[Modules](https://docs.nestjs.com/modules)、[Controllers](https://docs.nestjs.com/controllers)、[Components](https://docs.nestjs.com/components)、等框架的核心API。
-* [Webscoket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)運用篇(3天):[Nestjs](https://nestjs.com/)對於[Websocket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)有一些處理[更細緻的API](https://docs.nestjs.com/websockets/gateways)可以使用。
+* [Websocket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)運用篇(3天):[Nestjs](https://nestjs.com/)對於[Websocket](https://developer.mozilla.org/zh-TW/docs/WebSockets/WebSockets_reference/WebSocket)有一些處理[更細緻的API](https://docs.nestjs.com/websockets/gateways)可以使用。
 * [MicroServices](https://zh.wikipedia.org/zh-tw/%E5%BE%AE%E6%9C%8D%E5%8B%99)運用篇(2天):了解[Nestjs](https://nestjs.com/)如何建立[MicroServices](https://docs.nestjs.com/microservices/basics)。
 * 資料庫操作篇(3天):介紹如何透過[Nestjs](https://nestjs.com/)的API去[串接操作資料庫](https://docs.nestjs.com/recipes/sql-typeorm)。
 * 串接第三方API運用篇(3天):介紹如何在[Nestjs](https://nestjs.com/)使用[Passport模組](https://docs.nestjs.com/recipes/passport)、串接[Swagger](https://docs.nestjs.com/recipes/swagger)服務等。
@@ -37,34 +37,67 @@ JavaScript是弱型別語言，型態轉換很自由，型態檢查也沒那麼�
 * npm version:5.5.1
 
 ## Nestjs專案準備步驟
-1. cmd下指令,安裝[Nestjs CLI工具](https://github.com/nestjs/nest-cli)。
+1. cmd下指令。
 ```
-npm install -g @nestjs/cli
-```
-2. cmd下指令，透過[Nestjs CLI工具](https://github.com/nestjs/nest-cli)工具建立一個Nestjs專案。
-```
-nest new NestStarter
+git clone https://github.com/nestjs/typescript-starter.git project
 ```
 3. cmd下指令，切換到安裝資料夾，並安裝相關模組。
 ```
-cd NestStarter & npm install
+cd project & npm install
 ```
-4. 修改index.js，新增引用ts-node/register模組並修改server.ts引用的路徑。
-```typescript
-require('ts-node/register');
-require('./src/server');
-```
+專案架構圖
+![https://ithelp.ithome.com.tw/upload/images/20171205/20107195lNVRyn7KDH.png](https://ithelp.ithome.com.tw/upload/images/20171205/20107195lNVRyn7KDH.png)
 5. cmd下指令，啟動Server，如有看到下圖即大功告成，預設listen 3000 port。
 ```
 npm start
 ```
-![查看http://localhost:3000/](./ScreenShot/Server-Start.png)
+console結果
+```
+[Nest] 12780   - 2017-12-5 20:37:50   [NestFactory] Starting Nest application...
+[Nest] 12780   - 2017-12-5 20:37:50   [InstanceLoader] ApplicationModule dependencies initialized +8ms
+[Nest] 12780   - 2017-12-5 20:37:51   [RoutesResolver] AppController {/}: +40ms
+[Nest] 12780   - 2017-12-5 20:37:51   [RouterExplorer] Mapped {/, GET} route +4ms
+[Nest] 12780   - 2017-12-5 20:37:51   [NestApplication] Nest application successfully started +3ms
+```
 
 6. 將server.ts的程式碼稍作變化，程式碼及說明如下圖:
-![server.ts](./ScreenShot/Server-Start2.png)
+```
+import { NestFactory } from '@nestjs/core';
+import { ApplicationModule } from './app/app.module';
+import { INestApplication } from '@nestjs/common/interfaces/nest-application.interface';
+import * as express from 'express';//使用express模組
+
+//創建express 實例
+const instance = express();
+//NestFactory.create()接受一個模組引數，和一個可選的express實例引數，並返回Promise。
+const app: Promise<INestApplication> = NestFactory.create(ApplicationModule, instance);
+
+app
+  //Promise傳入nest的實例引數。
+  .then(nestInstance =>
+    //nest實例具有listen方法，傳入port引數，和一個可選的callback function。
+    nestInstance.listen(3000, () => {
+      console.log('Application based on Express is listening on port 3000');
+    })
+  )
+  .catch((err) => {
+    console.error('Application configured to listen on port 3000 failed to start', err);
+  });
+
+```
 
 7. cmd下指令，如看到下圖，代表我們已經成功啟動一個base on Express的nest 程式。
 ```
 npm start
 ```
-![查看http://localhost:3000/](./ScreenShot/Server-Start3.png)
+console結果
+```
+[Nest] 11632   - 2017-12-5 20:45:21   [NestFactory] Starting Nest application...
+[Nest] 11632   - 2017-12-5 20:45:21   [InstanceLoader] ApplicationModule dependencies initialized +8ms
+[Nest] 11632   - 2017-12-5 20:45:21   [RoutesResolver] AppController {/}: +31ms
+[Nest] 11632   - 2017-12-5 20:45:21   [RouterExplorer] Mapped {/, GET} route +5ms
+[Nest] 11632   - 2017-12-5 20:45:21   [NestApplication] Nest application successfully started +2ms
+Application based on Express is listening on port 3000
+```
+
+程式碼都在[github](https://github.com/m24927605/Nestjs30Days/tree/master/day01/Day01_Intoduction/project)
