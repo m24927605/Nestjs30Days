@@ -52,7 +52,7 @@ cd project & npm install
 npm start
 ```
 console結果
-```
+```java
 [Nest] 12780   - 2017-12-5 20:37:50   [NestFactory] Starting Nest application...
 [Nest] 12780   - 2017-12-5 20:37:50   [InstanceLoader] ApplicationModule dependencies initialized +8ms
 [Nest] 12780   - 2017-12-5 20:37:51   [RoutesResolver] AppController {/}: +40ms
@@ -61,7 +61,7 @@ console結果
 ```
 
 6. 將server.ts的程式碼稍作變化，程式碼及說明如下圖:
-```
+```javascript
 import { NestFactory } from '@nestjs/core';
 import { ApplicationModule } from './app/app.module';
 import { INestApplication } from '@nestjs/common/interfaces/nest-application.interface';
@@ -91,7 +91,7 @@ app
 npm start
 ```
 console結果
-```
+```java
 [Nest] 11632   - 2017-12-5 20:45:21   [NestFactory] Starting Nest application...
 [Nest] 11632   - 2017-12-5 20:45:21   [InstanceLoader] ApplicationModule dependencies initialized +8ms
 [Nest] 11632   - 2017-12-5 20:45:21   [RoutesResolver] AppController {/}: +31ms
