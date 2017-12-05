@@ -65,7 +65,7 @@ postman畫面
 
 說明: 觀察到Console畫面，UserController有load進去、路徑也有map，且[Postman](https://www.getpostman.com/apps)的結果會得到200狀態碼，代表Controller已經有被運行成功。
 
-5. 向/users發Http GET請求時，回傳點假資料看一下，程式碼修改如下圖。
+5. 向http://localhost:3000/users 發Http GET請求時，回傳點假資料看一下，程式碼修改如下圖。
 ```javascript
 import { Controller, Get, Post } from '@nestjs/common';
 
@@ -241,7 +241,7 @@ export class UsersController {
     }
 
     @Post()
-    //post過來的body會符合DTO class所描述的屬性
+    //post過來的body要符合DTO class所描述的屬性
     addUser(@Body() createUserDTO:CreateUserDTO) {
         //顯示POST過來的body請求體
         console.log('姓名:',createUserDTO._name,'年紀:',createUserDTO._age);
@@ -252,9 +252,8 @@ export class UsersController {
 15. 接著，透過[Postman](https://www.getpostman.com/apps) 往http://localhost:3000/users POST 一組資料，如下圖所示。
 ![https://ithelp.ithome.com.tw/upload/images/20171205/20107195s9sWmomU5D.png](https://ithelp.ithome.com.tw/upload/images/20171205/20107195s9sWmomU5D.png)
 
-16. POST 部分大功告成，可以收到POST過來的參數物件，且已經map到DTO 的class屬性，之後就可以對這組資料做物件操作，如下圖所示。
+16. POST 部分大功告成，可以收到POST過來的參數物件，且已經map到DTO 的class屬性，之後就可以對這組資料做物件操作，console畫面如下。
 ```java
-
 [Nest] 12128   - 2017-12-5 22:37:25   [NestFactory] Starting Nest application...
 [Nest] 12128   - 2017-12-5 22:37:25   [InstanceLoader] ApplicationModule dependencies initialized +7ms
 [Nest] 12128   - 2017-12-5 22:37:25   [RoutesResolver] UsersController {/users}: +26ms
@@ -265,3 +264,5 @@ export class UsersController {
 Application based on Express is listening on port 3000
 姓名: Michael Chen 年紀: 25
 ```
+
+程式碼在[github](https://github.com/m24927605/Nestjs30Days/tree/master/day02/Day02_Controllers/project)

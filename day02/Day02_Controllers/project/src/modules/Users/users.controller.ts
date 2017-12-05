@@ -20,6 +20,7 @@ export class UsersController {
     }
 
     @Post()
+    //post過來的body要符合DTO class所描述的屬性
     addUser(@Body() createUserDTO:CreateUserDTO) {
         //顯示POST過來的body請求體
         console.log('姓名:',createUserDTO._name,'年紀:',createUserDTO._age);
