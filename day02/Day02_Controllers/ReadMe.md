@@ -28,7 +28,7 @@ export class UsersController {
 ```
 說明: UsersController是一個帶有裝飾器(Decorator)的類，裝飾器(Decorator)會把metadata連接到controller上，我們定義好了上述/users、/users/:id，但ApplicationModule(根模組)，尚未引用UsersController，程式會完全沒變化，所以要去src/modules/app.module.ts改寫程式碼。
 
-3. 在src/app/app.module.ts，改寫成下圖所示。
+3. 在src/modules/app.module.ts，改寫成下圖所示。
 ```javascript
 import { Module } from '@nestjs/common';
 import { UsersController } from './Users/users.controller';
