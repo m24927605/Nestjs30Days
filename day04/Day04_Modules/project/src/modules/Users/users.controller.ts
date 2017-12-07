@@ -3,7 +3,6 @@ import { CreateUserDTO } from './DTO/create-users.dto';
 import { UsersService } from '../Users/Services/users.service';
 import { ProductsService } from '../Products/Services/products.service';
 
-
 @Controller()
 export class UsersController {
 
