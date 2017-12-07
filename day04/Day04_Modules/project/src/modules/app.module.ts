@@ -5,6 +5,7 @@ import { UsersModule } from './Users/users.module';
 import { ProductsModule } from './Products/products.module';
 
 @Module({
+  //load ProductsModule
   modules: [UsersModule, ProductsModule]
 })
 export class ApplicationModule { }
