@@ -35,7 +35,7 @@ export class UsersController {
     //@Param('id')可以直接抓id參數
     //使用ParseIntPipe
     async getUser( @Response() res, @Param('id', new ParseIntPipe()) id) {
-        //id參數前面不帶加號，ParseIntPipe會轉型為int型別
+        //id參數前面不帶加號，ParseIntPipe會將參數轉型為int型別
         await this.userService.getUser(id)
             .then((user) => {
                 res.status(HttpStatus.OK).json(user);
