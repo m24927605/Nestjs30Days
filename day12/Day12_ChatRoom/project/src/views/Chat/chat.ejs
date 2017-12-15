@@ -28,20 +28,22 @@
     <script>    
         const socket = io('ws://localhost:81/messages');
         $('#chatForm').submit(function(){
-          socket.emit('data', $('#chatMessage').val());
-          $('#chatMessage').val('');
-          return false;
+            //推訊息
+            socket.emit('pushMessage', $('#chatMessage').val());
+            $('#chatMessage').val('');
+            return false;
         });
+        //監聽新訊息事件
          socket.on('newMessage', function(msg){
-          $('#messages').append($('<li>').text(msg));
-          window.scrollTo(0, document.body.scrollHeight);
+            //顯示訊息 
+            $('#messages').append($('<li>').text(msg));
+            window.scrollTo(0, document.body.scrollHeight);
         });
-        $( "#chatMessage" ).keydown(function() {
-            socket.emit('isWriting', $('#chatMessage').val());
-        });
+        //監聽連線事件
         socket.on('connect', function() {
             console.log('Connected');
         });
+        //監聽斷線事件
         socket.on('disconnect', function() {
             console.log('Disconnected');
         });
