@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      #messages { margin-bottom: 40px }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <title>聊天囉</title>
+</head>
+<body>
+    <%= title %>
+    <ul id="messages"></ul>
+    <form id='chatForm' action="">
+      <input id="chatMessage" autocomplete="off" /><button>Send</button>
+    </form>
+    <script>   
+        const socket = io('ws://localhost:81/messages');
+        $('#chatForm').submit(function(){
+            //推訊息
+            var data={};
+            var Message=getCookie('name')+":"+$('#chatMessage').val();
+            //demo Gateway Guard機制，直接給定角色
+            data.roles=['wrong role'];
+            data.message=Message;
+            socket.emit('pushMessage', data);
+            $('#chatMessage').val('');
+            return false;
+        });
+        //監聽新訊息事件
+         socket.on('newMessage', function(msg){
+            //顯示訊息 
+            $('#messages').append($('<li>').text(msg.message));
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+        //監聽連線事件
+        socket.on('connect', function() {
+            console.log('Connected');
+        });
+        //監聽斷線事件
+        socket.on('disconnect', function() {
+            console.log('Disconnected');
+        });
+        
+        //取得cookie 值
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+        } 
+    </script>
+</body>
+</html>
