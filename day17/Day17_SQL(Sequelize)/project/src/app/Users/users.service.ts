@@ -8,8 +8,7 @@ import { IUsers, IUsersService } from './interfaces/index';
 @Component()
 export class UsersServices implements IUsersService {
     constructor(
-        @Inject('UsersRepository') private readonly usersRepository: typeof Users,
-        @Inject('SequelizeInstance') private readonly sequelizeInstance) { }
+        @Inject('UsersRepository') private readonly usersRepository: typeof Users) { }
 
     public async findAll():Promise<Array<Users>>{
         return await this.usersRepository.findAll<Users>();
