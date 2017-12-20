@@ -1,7 +1,7 @@
 USE [IronManNest]
 GO
 
-/****** Object:  Table [dbo].[Users]    Script Date: 2017/12/19 下午 11:52:28 ******/
+/****** Object:  Table [dbo].[Users]    Script Date: 2017/12/20 下午 10:47:14 ******/
 SET ANSI_NULLS ON
 GO
 
