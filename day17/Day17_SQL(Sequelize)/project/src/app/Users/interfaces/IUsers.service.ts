@@ -10,5 +10,5 @@ export interface IUsersService {
     //今天先完成Select部分，所以註解以下方法。
     /*create(users: IUsers): Promise<Users>;
     update(ID: number, newValue: IUsers): Promise<Users | null>;
-    delete(ID: number): Promise<void>;*/
+    delete(ID: number): Promise<number>;*/
 }

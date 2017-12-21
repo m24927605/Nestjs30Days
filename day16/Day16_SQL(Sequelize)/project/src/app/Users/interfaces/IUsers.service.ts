@@ -9,5 +9,5 @@ export interface IUsersService {
     findOne(options: Object): Promise<Users | null>;
     create(users: IUsers): Promise<Users>;
     update(ID: number, newValue: IUsers): Promise<Users | null>;
-    delete(ID: number): Promise<void>;
+    delete(ID: number): Promise<number>;
 }
