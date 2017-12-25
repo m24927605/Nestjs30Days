@@ -21,7 +21,7 @@ export class UsersController {
     @Get('users/find')
     public async findUser( @Response() res) {
         //給定where條件
-        let queryCondition = { where: { Name: 'Mary' } };
+        let queryCondition ={ Name: 'Michael' };
         const users = await this.usersServices.findOne(queryCondition);
         return res.status(HttpStatus.OK).json(users);
     }
