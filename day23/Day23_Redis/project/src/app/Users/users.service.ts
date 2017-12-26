@@ -1,7 +1,6 @@
 'use strict';
 
 import { Component, Inject } from '@nestjs/common';
-import { IUsers, IUsersService } from './interfaces/index';
 import { createClient } from 'redis';
 @Component()
 export class UsersServices {
