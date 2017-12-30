@@ -33,12 +33,13 @@
     2. 實作方式:[Nestjs](https://nestjs.com/)後端產Restful API給[Angular](https://angular.io/)前端串接，前後端皆要做好Route與權限保護，使用[JWT Token](https://jwt.io/)做網站驗證保護。
 * 比特幣新聞
     1. 正式資源:
-               https://chroniclingamerica.loc.gov/about/api/
-               https://github.com/feedbin/feedbin-api
-               https://developer.nytimes.com/
-               https://newsapi.org/
-               https://dev.npr.org/api/
-               http://open-platform.theguardian.com/
+
+        * [https://chroniclingamerica.loc.gov/about/api/](https://chroniclingamerica.loc.gov/about/api/)
+        * [https://github.com/feedbin/feedbin-api](https://github.com/feedbin/feedbin-api)
+        * [https://developer.nytimes.com/](https://developer.nytimes.com/ ) 
+        * [https://newsapi.org/](https://newsapi.org/)
+        * [https://dev.npr.org/api/](https://dev.npr.org/api/)
+        * [http://open-platform.theguardian.com/](http://open-platform.theguardian.com/)
     2. 備用資源:正式資源即備用資源。
 * 聊天室
     1. 功能:登入後提供聊天室功能，聊天紀錄寫入[Redis](https://redis.io/)。
