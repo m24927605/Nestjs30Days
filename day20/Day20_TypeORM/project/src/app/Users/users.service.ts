@@ -28,7 +28,7 @@ export class UsersServices implements IUsersService {
     }
 
     public async create(users: IUsers): Promise<Users> {
-        return await this.usersRepository.create(users);
+        return await this.usersRepository.save(users);
     }
 
     public async update(ID: number, newValue: IUsers): Promise<Users | null> {
