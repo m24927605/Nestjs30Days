@@ -20,7 +20,7 @@
     "@types/body-parser": "^1.16.8",
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
-    "redis": "^2.7.1",
+    "redis": "^3.1.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.0",
     "typescript": "^2.5.2"
